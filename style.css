@@ -23,13 +23,13 @@
 }
 .head__title{
 
-	font: 38px/46px 'girloy', arial, helvetica, sans-serif;
+	font: 38px/46px 'girloybold', arial, helvetica, sans-serif;
 	    line-height: 3.8vw;
 	    color: #FFFFFF;
 	    margin: 30px 0 36px 0px;
 }
  .head__subtitle{
-	 font: 800 27px/36px 'girloy' , arial, helvetica, sans-serif;
+	 font: 800 27px/36px 'girloybold' , arial, helvetica, sans-serif;
 	     /* line-height: 1vw; */
 	     color: #FFCC33;
 	     margin: 30px 37px 0 4px;
@@ -104,20 +104,20 @@
 }
 .head__button {
   display: inline-block;
-  font: 900 22px/23px Montserrat, arial, helvetica, sans-serif;
+  font: 900 22px/23px 'montserratblack', arial, helvetica, sans-serif;
   color: #3030C1;
   background: #FFCC33;;
   padding: 15px 20px;
   text-decoration: none;
 }
 .main__title1{
-	font: 800 34px/49px 'Gilroy', arial, helvetica, sans-serif;
+	font: 800 34px/49px 'girloybold', arial, helvetica, sans-serif;
 			text-align: center;
 			margin: 54px 0 33px 0;
 }
 
 .main__title2{
-	font: 800 34px/49px 'Gilroy', arial, helvetica, sans-serif;
+	font: 800 34px/49px 'girloybold', arial, helvetica, sans-serif;
 	text-align: center;
  	margin: 51px 0 0;
 }
@@ -128,7 +128,7 @@
     margin: auto;
 }
 .main__discription{
-font: 300 30px/35px 'Gilroy', arial, helvetica, sans-serif;
+font: 300 30px/35px 'girloybold', arial, helvetica, sans-serif;
 			text-align: center;
     margin: 36px 0 54px;
 
@@ -145,14 +145,14 @@ font: 300 30px/35px 'Gilroy', arial, helvetica, sans-serif;
 				position: relative;
 }
 .main__study_title{
-	font: 800 27px/37px 'Gilroy', arial, helvetica, sans-serif;
+	font: 800 27px/37px 'girloybold', arial, helvetica, sans-serif;
 	color: #3030C1;
 	margin: 26px 36px 27px 36px;
 	text-align: center;
 
 }
 .main__study_discription{
-	font: 800 16px/25px 'Gilroy', arial, helvetica, sans-serif;
+	font: 800 16px/25px 'girloybold', arial, helvetica, sans-serif;
 	    margin: 16px 44px 65px 41px;
 	    text-align: center;
 }
@@ -166,14 +166,14 @@ font: 300 30px/35px 'Gilroy', arial, helvetica, sans-serif;
 }
 
 .main__work_title{
-	font: 800 26px/37px 'Gilroy', arial, helvetica, sans-serif;
+	font: 800 26px/37px 'girloybold', arial, helvetica, sans-serif;
 	    color: #3030C1;
 	    margin: 24px 4px 12px 4px;
 	    text-align: center;
 }
 
 .main__work_discription{
-	font: 800 17px/25px 'Gilroy', arial, helvetica, sans-serif;
+	font: 800 17px/25px 'girloybold', arial, helvetica, sans-serif;
 	    margin: 0 50px 25px 42px;
 	    text-align: center;
 
@@ -186,18 +186,18 @@ font: 300 30px/35px 'Gilroy', arial, helvetica, sans-serif;
 	font-size: 0.9em;
 }
 .main__money_title{
-	font: 800 25px/37px 'Gilroy', arial, helvetica, sans-serif;
+	font: 800 25px/37px 'girloybold', arial, helvetica, sans-serif;
 	color: #3030C1;
 	margin: 23px 30px -9px 30px;
 	text-align: center;
 }
 .main__money_discription{
-	font: 800 17px/25px 'Gilroy', arial, helvetica, sans-serif;
+	font: 800 17px/25px 'girloybold', arial, helvetica, sans-serif;
 	margin: 35px 47px 33px;
 	text-align: center;
 }
 .main__form_title{
-	font: 800 33px/49px 'Gilroy', arial, helvetica, sans-serif;
+	font: 800 33px/49px 'girloybold', arial, helvetica, sans-serif;
 	    text-align: center;
 	    margin: 0 0 48px;
 }
@@ -206,7 +206,7 @@ font: 300 30px/35px 'Gilroy', arial, helvetica, sans-serif;
 	margin: 0 auto;
 }
 .main__form_name{
-font: 300 20px/23px 'Gilroy', arial, helvetica, sans-serif;
+font: 300 20px/23px 'girloybold', arial, helvetica, sans-serif;
 display: flex;
     margin: 0 auto;
 		margin-bottom: 14px;
@@ -217,7 +217,7 @@ display: flex;
 }
 
 .main__form_email{
-	font: 300 20px/23px 'Gilroy', arial, helvetica, sans-serif;
+	font: 300 20px/23px 'girloylight', arial, helvetica, sans-serif;
 	display: flex;
 	margin: 0 auto;
 	margin-bottom: 74px;
@@ -233,7 +233,7 @@ border:none; /*убрали обводку */
 .main__form_button{
 	display: flex;
 	margin: 0 auto;
-	  font: 900 22px/23px 'Montserrat', arial, helvetica, sans-serif;
+	  font: 900 22px/23px 'montserratblack', arial, helvetica, sans-serif;
 		opacity: 1;
 
 	  background:#FFDA45;
