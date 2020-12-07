@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;900&display=swap');
+
 .body{
 	margin: 0;
 }
@@ -20,7 +22,7 @@
 	    padding: 10vw 0px 18px 0px;
 }
 .head__title{
-	
+
 	font: 38px/46px 'girloybold', arial, helvetica, sans-serif;
 	    line-height: 3.8vw;
 	    color: #FFFFFF;
@@ -102,7 +104,7 @@
 }
 .head__button {
   display: inline-block;
-  font: 22px/23px 'Montserrat', arial, helvetica, sans-serif;
+  font: 900 22px/23px Montserrat, arial, helvetica, sans-serif;
   color: #3030C1;
   background: #FFCC33;;
   padding: 15px 20px;
