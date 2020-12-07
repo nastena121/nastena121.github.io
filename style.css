@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;900&display=swap');
+
 .body{
 	margin: 0;
 }
@@ -20,29 +22,89 @@
 	    padding: 10vw 0px 18px 0px;
 }
 .head__title{
-	font: 800 38px/46px 'Gilroy', arial, helvetica, sans-serif;
+
+	font: 38px/46px 'girloy', arial, helvetica, sans-serif;
 	    line-height: 3.8vw;
 	    color: #FFFFFF;
 	    margin: 30px 0 36px 0px;
 }
  .head__subtitle{
-	 font: 800 27px/36px 'Gilroy', arial, helvetica, sans-serif;
+	 font: 800 27px/36px 'girloy' , arial, helvetica, sans-serif;
 	     /* line-height: 1vw; */
 	     color: #FFCC33;
 	     margin: 30px 37px 0 4px;
  }
 
 .head__discription{
-	font: 300 20px/23px 'Gilroy', arial, helvetica, sans-serif;
+	font:  20px/23px 'gilroylight', arial, helvetica, sans-serif;
 	    /* line-height: 1vw; */
 	    color: #FFFFFF;
 	    margin: 12px 103px 33px 0px;
 
 }
+@-webkit-keyframes swing {
+  15% {
+    -webkit-transform: translateX(9px);
+    transform: translateX(9px);
+  }
+  30% {
+    -webkit-transform: translateX(-9px);
+    transform: translateX(-9px);
+  }
+  40% {
+    -webkit-transform: translateX(6px);
+    transform: translateX(6px);
+  }
+  50% {
+    -webkit-transform: translateX(-6px);
+    transform: translateX(-6px);
+  }
+  65% {
+    -webkit-transform: translateX(3px);
+    transform: translateX(3px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
 
+@keyframes swing {
+  15% {
+    -webkit-transform: translateX(9px);
+    transform: translateX(9px);
+  }
+  30% {
+    -webkit-transform: translateX(-9px);
+    transform: translateX(-9px);
+  }
+  40% {
+    -webkit-transform: translateX(6px);
+    transform: translateX(6px);
+  }
+  50% {
+    -webkit-transform: translateX(-6px);
+    transform: translateX(-6px);
+  }
+  65% {
+    -webkit-transform: translateX(3px);
+    transform: translateX(3px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+.head__button:hover {
+  -webkit-animation: swing 0.6s ease;
+  animation: swing 0.6s ease;
+   -webkit-animation-iteration-count: 1;
+   animation-iteration-count: 1;
+}
 .head__button {
   display: inline-block;
-  font: 22px/23px 'Montserrat', arial, helvetica, sans-serif;
+  font: 900 22px/23px Montserrat, arial, helvetica, sans-serif;
   color: #3030C1;
   background: #FFCC33;;
   padding: 15px 20px;
@@ -74,11 +136,13 @@ font: 300 30px/35px 'Gilroy', arial, helvetica, sans-serif;
 .main__study{
 	background: top 47px center url(img/studyimg.svg) no-repeat;
 	padding: 160px 10px 0 10px;
-	box-shadow: 0 0 5px;
-	position: relative;
 	margin-right: 20px;
-	width: 380px;
 
+}
+.main__work, .main__study, .main__money{
+		box-shadow: 0 0 10px rgba(0,0,0,0.5);
+			width: 380px;
+				position: relative;
 }
 .main__study_title{
 	font: 800 27px/37px 'Gilroy', arial, helvetica, sans-serif;
@@ -97,10 +161,8 @@ font: 300 30px/35px 'Gilroy', arial, helvetica, sans-serif;
 	background: top 51px center url(img/workimg.svg) no-repeat;
 	padding: 166px 9px 23px 9px;
 	font-size: 0.9em;
-	box-shadow: 0 0 5px;
-	position: relative;
 	margin-right: 20px;
-	width: 380px;
+
 }
 
 .main__work_title{
@@ -119,12 +181,9 @@ font: 300 30px/35px 'Gilroy', arial, helvetica, sans-serif;
 
 .main__money{
 	background: top 47px center url(img/moneyimg.svg) no-repeat;
-	box-shadow: 0 0 5px;
-	position: relative;
 	margin-right: 0px;
 	padding: 164px 10px 2px 12px;
 	font-size: 0.9em;
-	width: 380px;
 }
 .main__money_title{
 	font: 800 25px/37px 'Gilroy', arial, helvetica, sans-serif;
@@ -168,11 +227,14 @@ border:none; /*убрали обводку */
 	color: #878787;
 
 }
-
+.main__form_button:hover{
+	  opacity: 0.6;
+}
 .main__form_button{
 	display: flex;
 	margin: 0 auto;
 	  font: 900 22px/23px 'Montserrat', arial, helvetica, sans-serif;
+		opacity: 1;
 
 	  background:#FFDA45;
 padding: 30px 20px 29px 20px;
@@ -250,8 +312,11 @@ font: 800 21px/31px 'Gilroy', arial, helvetica, sans-serif;
 		    margin: 2px 29px 33px 0px;
 	}
 
+
+
 	.head__button {
 		display: none;
+
 	}
 
 	.main__title1{
@@ -300,7 +365,7 @@ margin: -2px 10px 5px;
 }
 .main__form {
     padding: 44px 0;
-} 
+}
 	.main__form_title{
 		font: 800 17px/25px 'Gilroy', arial, helvetica, sans-serif;
     margin: 0px 22px 26px;
