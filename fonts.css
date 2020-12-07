@@ -71,14 +71,14 @@
 
 @font-face {
     font-family: 'girloybold';
-    src: url(fonts/girloybold.woff) format('woff');
+    src: url('fonts/radomir_tinkov_-_gilroy-extrabold-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'gilroylight';
-    src: url(fonts/gilroylight.woff) format('woff');
+    src: url('fonts/radomir_tinkov_-_gilroy-light-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
