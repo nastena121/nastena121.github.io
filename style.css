@@ -643,8 +643,8 @@ margin: -2px 10px 5px;
     margin: 7px 58px 17px;
 }
 .main__form_title {
-    font: 800 17px/25px 'girloybold', arial, helvetica, sans-serif;
-    margin: 0px 25px 26px 24px;
+	font: 800 17px/25px 'girloybold', arial, helvetica, sans-serif;
+margin: 1px 25px 26px 25px;
 }
 	.head{
 		padding: 0px 0 254px 2px;
@@ -671,5 +671,17 @@ margin: -2px 10px 5px;
 		font: 300 15px/17px 'girloybold', arial, helvetica, sans-serif;
 		    margin: 2px 29px 33px 0px;
 	}
+	.main__form_email {
+    padding: 17px 0px 15px 18px;
+}
 
+.main__form_name {
+    padding: 17px 0 15px 17px;
+}
+.main__form_button {
+    width: 261px;
+    font: 900 10px/12px 'montserratblack', arial, helvetica, sans-serif;
+    padding: 20px 3px 15px;
+    margin-bottom: -3px;
+}
 }
