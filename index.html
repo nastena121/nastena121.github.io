@@ -3,68 +3,438 @@
 <head>
      <meta charset="utf-8">
      <meta name="viewport" content="width=device-width,initial-scale=1.0">
-
-
-     <title class="name-site">Business card website</title>
-    <link rel="stylesheet" href="fonts.css">
-    <link rel="stylesheet" href="style.css">
+      <link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@700&family=Roboto:wght@500&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="fonts.css">
+      <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+<link rel="shortcut icon" href="img/logo.svg" type="image/svg">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="style.css">
+     <title class="name-site">проект "Московский диалог"</title>
 </head>
 
 <body style="margin: 0;">
   <div class="wrapper">
-   <header class="header">
-     <div class="logo">
-     </div>
-    <section class="head">
-    <h1 class="head__title">Совсем скоро я&nbsp;стану
-       крутым веб&#8209;разработчиком! </h1>
-    <h3 class="head__subtitle">У меня большие планы
-       на&nbsp;ближайшее будущее!</h3>
-    <p class="head__discription">Я знаю, у меня все получится, ведь я уверенно
-      шагаю вперед и&nbsp;достигаю больших результатов</p>
-    <a class="head__button" href="#">Узнать больше</a>
-     </section>
-  </header>
-  </div>
-  <section class="main">
-  <h1 class="main__title1">Вот что я планирую</h1>
-  <div class="blok">
-  <div class="main__study">
-    <h2 class="main__study_title"> Окончить курсы в&nbsp;WebHero School </h2>
-    <p class="main__study_discription">Стать профессионалом
-    своего дела</p>
-  </div>
-  <div class="main__work">
-    <h2 class="main__work_title"> Устроиться на работу своей мечты </h2>
-    <p class="main__work_discription">Приходить на любимую работу с
-       большой радостью </p>
-  </div>
-  <div class="main__money">
-    <h2 class="main__money_title"> Заработать свои первые деньги </h2>
-    <p class="main__money_discription"> Зарабатывать от 120 000
-      рублей в месяц </p>
-  </div>
-</div>
-  <h1 class="main__title2">И это только начало!</h1>
-  <p class="main__discription">Я буду расти в&nbsp;области веб&#8209;разработки с&nbsp;каждым&nbsp;годом.<br>
-    Мои навыки и заработная плата будут расти вместе&nbsp;со&nbsp;мной.<br>
-    А сегодня я уже&nbsp;могу&nbsp;сверстать самостоятельно свой первый landing. </p>
-  </section>
-<div class="ground">
-  <section class="main">
-  <form class="main__form" action="/action_page.php" target="_blank">
-    <legend class="main__form_title">Ты тоже можешь изменить&nbsp;свою&nbsp;профессию</legend>
-    <input class="main__form_name" type="text" name="fname"
-    value="Введи свое имя" ><br>
-    <input class="main__form_email" type="email" name="email"
-    placeholder="Введи свою электронную почту">
-    <input class="main__form_button" type="submit" value="Оcтавь заявку">
-  </form>
-</section>
-</div>
+    <header class="main-header">
+      <div class="container3">
+        <nav class="navbar navbar-expand-lg main-nav px-0">
+          <a class="navbar-brand" href="index.html">
+  					      <img src="img/logo.svg" alt="rajeshdas.com">
+  					    </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainMenu" aria-controls="mainMenu" aria-expanded="false" aria-label="Toggle navigation">
+                          <span class="icon-bar icon-bar-1"></span>
+                          <span class="icon-bar icon-bar-2"></span>
+                          <span class="icon-bar icon-bar-3"></span>
+                      </button>
+          <div class="collapse navbar-collapse" id="mainMenu">
+            <ul class="navbar-nav ml-auto text-uppercase f1">
+              <li>
+                <a href="raspis.html"class="active active-first">Расписание</a>
+              </li>
+              <li>
+                <a href="About.html">о проекте</a>
+              </li>
+              <li>
+                <a href="community.html">сотрудничество</a>
+              </li>
+              <li>
+                <a  href="contact.html">контакты</a>
+              </li>
+              <li>
+                <a href="#formR">Регистрация</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <!-- /.container -->
+    </header>
+    <!-- первый экран-->
 
+
+    <section class="main">
+
+      <div>
+        <h1 class="main__title">Молодежь Москвы <span class="main__title-text_highlight">развивайся вместе с&nbsp;нами!</span></h1>
+        <p class="main__discription">Наш проект даст возможность принять участие в&nbsp;будущем развитие города,
+        обучит новому, а&nbsp;также познакомит с&nbsp;яркими личностями!</p>
+        <a class="main__button" href="#formR">Присоединиться</a>
+
+      </div>
+    </section>
+        <!-- мероприятия-->
+    <div>
+      <div class="wrapper-grey padded">
+      <div class="container">
+
+        <h2 class="text-center tit">Наши мероприятия</h2>
+        <div class="col-xs-12 col-sm-4">
+            <div class="card" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(img/studyimg.svg);">
+              <div class="card-description">
+                <h2>Мастер-классы</h2>
+              </div>
+              <a class="card-link" href="raspis.html" ></a>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-4">
+            <div class="card" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(img/workimg.svg);">
+              <div class="card-description">
+                <h2>Ted-встречи</h2>
+              </div>
+              <a class="card-link" href="raspis.html" ></a>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-4">
+            <div class="card" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(img/moneyimg.svg) ;">
+              <div class="card-description">
+                <h2>Завтраки с пользой</h2>
+              </div>
+              <a class="card-link" href="raspis.html" ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+      <script src="https://kit.fontawesome.com/fc596df623.js" crossorigin="anonymous"></script>
+  <!-- время-->
+<section class="timel">
+  <h2 class="text-center">Наши достижения</h2>
+  <div class="timeline">
+
+	<!--first-->
+	<div class="timeline__event  animated fadeInUp delay-3s timeline__event--type1">
+		<div class="timeline__event__icon ">
+			<!-- <i class="lni-sport"></i>-->
+
+		</div>
+		<div class="timeline__event__date">
+			2017 ГОД
+		</div>
+		<div class="timeline__event__content ">
+			<div class="timeline__event__title">
+				ВСЕ НАЧАЛОСЬ С ИДЕИ
+			</div>
+			<div class="timeline__event__description">
+				<p>Идея о «Московском диалоге» родилась на фестивале молодежи и студентов в Сочи.
+        На первых порах проект состоял лишь из выездных лекториев, ориентированных на неформальное образование студентов.
+      Неформальное образование – это любой вид организованной и систематической деятельности, которая может не совпадать
+       с деятельностью школ, колледжей, университетов и других учреждений, входящих в формальные системы образования.</p>
+			</div>
+		</div>
+	</div>
+
+	<!--second-->
+
+	<div class="timeline__event animated fadeInUp delay-2s timeline__event--type2">
+		<div class="timeline__event__icon">
+			<!-- <i class="lni-sport"></i>-->
+
+		</div>
+		<div class="timeline__event__date">
+			2018 ГОД
+		</div>
+		<div class="timeline__event__content">
+			<div class="timeline__event__title">
+				ФОРУМ "ЗАВТРАК С ПОЛЬЗОЙ"
+			</div>
+			<div class="timeline__event__description">
+				<p> Был создан более постоянный и организованный форум «Завтрак с пользой»</p>
+			</div>
+		</div>
+	</div>
+
+	<!--third-->
+
+	<div class="timeline__event animated fadeInUp delay-1s timeline__event--type3">
+		<div class="timeline__event__icon">
+			<!-- <i class="lni-sport"></i>-->
+
+		</div>
+		<div class="timeline__event__date">
+			2019 ГОД
+		</div>
+		<div class="timeline__event__content">
+			<div class="timeline__event__title">
+				ПЕРВЫЙ ВЫЕЗДНОЙ ФОРУМ ПРОЕКТА
+			</div>
+			<div class="timeline__event__description">
+				<p>2019 году был организован первый выездной форум. Участниками форума
+        стали 18 университетов, таких как: МГУТУ, МИРЭА, РГСУ, РУДН, РАНХиГС и другие
+        известные ВУЗы страны</p>
+			</div>
+
+		</div>
+	</div>
+
+	<!--forth-->
+
+	<div class="timeline__event animated fadeInUp timeline__event--type1">
+		<div class="timeline__event__icon">
+			<!-- <i class="lni-sport"></i>-->
+
+
+		</div>
+		<div class="timeline__event__date">
+			ДЕКАБРЬ 2020 ГОД
+		</div>
+		<div class="timeline__event__content">
+			<div class="timeline__event__title">
+				ОНЛАЙН ЖИЗНЬ ПРОЕКТА
+			</div>
+			<div class="timeline__event__description">
+				<p>В декабре 2020 года, «Московский диалог» провел 72 эфира</p>
+			</div>
+		</div>
+	</div>
+
+	<!--first-->
+	<div class="timeline__event  animated fadeInUp delay-3s timeline__event--type1">
+		<div class="timeline__event__icon ">
+			<!-- <i class="lni-sport"></i>-->
+
+		</div>
+		<div class="timeline__event__date">
+			2021 ГОД
+		</div>
+		<div class="timeline__event__content ">
+			<div class="timeline__event__title">
+				УЧАСТИЕ  ПРОЕКТЕ "МАЯК"
+			</div>
+			<div class="timeline__event__description">
+				<p>С 13-15 марта самые активные участники #МосДиалог приняли
+          участие в управленческом форуме «МАЯК»</p>
+			</div>
+		</div>
+	</div>
+
+	<!--second-->
+
+	<div class="timeline__event animated fadeInUp delay-2s timeline__event--type2">
+		<div class="timeline__event__icon">
+			<!-- <i class="lni-sport"></i>-->
+
+		</div>
+		<div class="timeline__event__date">
+			2021 ГОД
+		</div>
+		<div class="timeline__event__content">
+			<div class="timeline__event__title">
+				РАСШИРЕНИЕ ПРОЕКТА
+			</div>
+			<div class="timeline__event__description">
+				<p>В новом сезоне присоединилось около 10 новых университов и
+          в сообщество по статистике были вовлечены более 10 тысяч
+          студентов из уже 30 вузов столицы.</p>
+			</div>
+		</div>
+	</div>
+
+	<!--third-->
+
+	<div class="timeline__event animated fadeInUp delay-1s timeline__event--type3">
+		<div class="timeline__event__icon">
+			<!-- <i class="lni-sport"></i>-->
+
+		</div>
+		<div class="timeline__event__date">
+			2021 ГОД
+		</div>
+		<div class="timeline__event__content">
+			<div class="timeline__event__title">
+				ИЗМЕНЕНИЕ НАПРАЛЕНИЕ
+			</div>
+			<div class="timeline__event__description">
+				<p>В этом году мы видоизменили направление “Завтраки с пользой”
+        Благодаря этому участники смогли теперь не только пообщаться с известным человеком за утренним кофе,
+        но и вместе с ним приготовить кулинарный шедевр.
+        То есть мы совместили интересное общение и кулинарный мастер-класс.</p>
+			</div>
+
+		</div>
+	</div>
+
+	<!--forth-->
+
+	<div class="timeline__event animated fadeInUp timeline__event--type1">
+		<div class="timeline__event__icon">
+			<!-- <i class="lni-sport"></i>-->
+
+		</div>
+		<div class="timeline__event__date">
+			ДЕКАБРЬ 2021 ГОД
+		</div>
+		<div class="timeline__event__content">
+			<div class="timeline__event__title">
+				ВТОРОЙ ВЫЕЗДНОЙ ФОРУМ
+			</div>
+			<div class="timeline__event__description">
+				<p>Произошла смена руководителя проекта и организован зимний выездной форум, активисты которых были выбраны из рейтинга посещения мероприятий</p>
+			</div>
+		</div>
+	</div>
+
+	<!--first-->
+	<div class="timeline__event  animated fadeInUp delay-3s timeline__event--type1">
+		<div class="timeline__event__icon ">
+			<!-- <i class="lni-sport"></i>-->
+
+		</div>
+		<div class="timeline__event__date">
+			МАРТ 2022 ГОДА
+		</div>
+		<div class="timeline__event__content ">
+			<div class="timeline__event__title">
+				иТОГОВОЕ МЕРОПРИЯТИЕ МД
+			</div>
+			<div class="timeline__event__description">
+				<p> Первое масштабное итогове мероприятие в лофте, на котором были награждены самые активные участиник преота и подведены итоги проекта</p>
+			</div>
+		</div>
+	</div>
+
+	<!--second-->
+
+	<div class="timeline__event animated fadeInUp delay-2s timeline__event--type2">
+		<div class="timeline__event__icon">
+			<!-- <i class="lni-sport"></i>-->
+
+		</div>
+		<div class="timeline__event__date">
+			2022 ГОД
+		</div>
+		<div class="timeline__event__content">
+			<div class="timeline__event__title">
+				РАСШИРЕНИЕ КОМАНДЫ
+			</div>
+			<div class="timeline__event__description">
+				<p>К команде организаторов присодинились пять самых активных участников проекта, которые помогают развивать проект по наши дни</p>
+			</div>
+		</div>
+	</div>
+
+	<!--third-->
+
+	<div class="timeline__event animated fadeInUp delay-1s timeline__event--type3">
+		<div class="timeline__event__icon">
+			<!-- <i class="lni-sport"></i>-->
+
+		</div>
+		<div class="timeline__event__date">
+			ИЮНЬ 2022
+		</div>
+		<div class="timeline__event__content">
+			<div class="timeline__event__title">
+				ТРЕТИЙ ВЫЕЗДНОЙ ФОРУМ
+			</div>
+			<div class="timeline__event__description">
+				<p>Первый летний выездной форум, который смогли посетить одни из самых активных участников проекта</p>
+			</div>
+
+		</div>
+	</div>
+
+	<!--forth-->
+
+	<div class="timeline__event animated fadeInUp timeline__event--type1">
+		<div class="timeline__event__icon">
+			<!-- <i class="lni-sport"></i>-->
+
+		</div>
+		<div class="timeline__event__date">
+			2022 ГОД
+		</div>
+		<div class="timeline__event__content">
+			<div class="timeline__event__title">
+				НАГРАЖДЕНИЕ АКТИВИСТОВ
+			</div>
+			<div class="timeline__event__description">
+				<p>Подведение итогов сезона и выдача благодарственных писем активным участникам проекта</p>
+			</div>
+		</div>
+	</div>
+
+</div>
+</section>
+  <!-- форма-->
+
+
+  <div class="anim">
+    <!-- аккордеон --><a class="group" id="page-wrap"  target="_blank" rel="external noopener">
+        <div id="inner-wrap"><svg class="waves" xmlns="http://www.w3.org/2000/svg" width="1440" height="321.75" viewBox="0 0 960 214.5" preserveAspectRatio="xMinYMid meet"><defs><style>.waves>path{-webkit-animation:a 17390ms ease-in-out infinite alternate-reverse both;-moz-animation:a 17390ms ease-in-out infinite alternate-reverse both;-ms-animation:a 17390ms ease-in-out infinite alternate-reverse both;-o-animation:a 17390ms ease-in-out infinite alternate-reverse both;animation:a 17390ms ease-in-out infinite alternate-reverse both;-webkit-animation-timing-function:cubic-bezier(.25,0,.75,1);-moz-animation-timing-function:cubic-bezier(.25,0,.75,1);-ms-animation-timing-function:cubic-bezier(.25,0,.75,1);-o-animation-timing-function:cubic-bezier(.25,0,.75,1);animation-timing-function:cubic-bezier(.25,0,.75,1);-webkit-will-change:transform;-moz-will-change:transform;-ms-will-change:transform;-o-will-change:transform;will-change:transform}.waves>path:nth-of-type(1){-webkit-animation-duration:20580ms;-moz-animation-duration:20580ms;-ms-animation-duration:20580ms;-o-animation-duration:20580ms;animation-duration:20580ms}.waves>path:nth-of-type(2){-webkit-animation-delay:-2690ms;-moz-animation-delay:-2690ms;-ms-animation-delay:-2690ms;-o-animation-delay:-2690ms;animation-delay:-2690ms;-webkit-animation-duration:13580ms;-moz-animation-duration:13580ms;-ms-animation-duration:13580ms;-o-animation-duration:13580ms;animation-duration:13580ms}g>path:nth-of-type(1){-webkit-animation-delay:-820ms;-moz-animation-delay:-820ms;-ms-animation-delay:-820ms;-o-animation-delay:-820ms;animation-delay:-820ms;-webkit-animation-duration:10730ms;-moz-animation-duration:10730ms;-ms-animation-duration:10730ms;-o-animation-duration:10730ms;animation-duration:10730ms}.waves>path:nth-of-type(1),g>path:nth-of-type(2){-webkit-animation-direction:alternate;-moz-animation-direction:alternate;-ms-animation-direction:alternate;-o-animation-direction:alternate;animation-direction:alternate}@-webkit-keyframes a{0%{-webkit-transform:translateX(-750px);transform:translateX(-750px)}100%{-webkit-transform:translateX(-20px);transform:translateX(-20px)}}@-moz-keyframes a{0%{-moz-transform:translateX(-750px);transform:translateX(-750px)}100%{-moz-transform:translateX(-20px);transform:translateX(-20px)}}@-ms-keyframes a{0%{-ms-transform:translateX(-750px);transform:translateX(-750px)}100%{-ms-transform:translateX(-20px);transform:translateX(-20px)}}@-o-keyframes a{0%{-o-transform:translateX(-750px);transform:translateX(-750px)}100%{-o-transform:translateX(-20px);transform:translateX(-20px)}}@keyframes a{0%{-webkit-transform:translateX(-750px);-moz-transform:translateX(-750px);-ms-transform:translateX(-750px);-o-transform:translateX(-750px);transform:translateX(-750px)}100%{-webkit-transform:translateX(-20px);-moz-transform:translateX(-20px);-ms-transform:translateX(-20px);-o-transform:translateX(-20px);transform:translateX(-20px)}}</style><linearGradient id="a"><stop stop-color="#00A8DE"/><stop offset="0.2" stop-color="#333391"/><stop offset="0.4" stop-color="#E91388"/><stop offset="0.6" stop-color="#EB2D2E"/>
+        </linearGradient></defs><path fill="url(#a)" d="M2662.6 1S2532 41.2 2435 40.2c-19.6-.2-37.3-1.3-53.5-2.8 0 0-421.3-59.4-541-28.6-119.8 30.6-206.2 75.7-391 73.3-198.8-2-225.3-15-370.2-50-145-35-218 37-373.3 36-19.6 0-37.5-1-53.7-3 0 0-282.7-36-373.4-38C139 26 75 46-1 46v106c17-1.4 20-2.3 37.6-1.2 130.6 8.4 210 56.3 287 62.4 77 6 262-25 329.3-23.6 67 1.4 107 22.6 193 23.4 155 1.5 249-71 380-62.5 130 8.5 209 56.3 287 62.5 77 6 126-18 188-18 61.4 0 247-38 307.4-46 159.3-20 281.2 29 348.4 30 67 2 132.2 6 217.4 7 39.3 0 87-11 87-11V1z"/><path fill="#F2F5F5" d="M2663.6 73.2S2577 92 2529 89c-130.7-8.5-209.5-56.3-286.7-62.4s-125.7 18-188.3 18c-5 0-10-.4-14.5-.7-52-5-149.2-43-220.7-39-31.7 2-64 14-96.4 30-160.4 80-230.2-5.6-340.4-18-110-12-146.6 20-274 36S820.4 0 605.8 0C450.8 0 356 71 225.2 62.2 128 56 60.7 28-.3 11.2V104c22 7.3 46 14.2 70.4 16.7 110 12.3 147-19.3 275-35.5s350 39.8 369 43c27 4.3 59 8 94 10 13 .5 26 1 39 1 156 2 250-70.3 381-62 130.5 8.2 209.5 56.3 286.7 62 77 6.4 125.8-18 188.3-17.5 5 0 10 .2 14.3.6 52 5 145 49.5 220.7 38.2 32-5 64-15 96.6-31 160.5-79.4 230.3 6 340 18.4 110 12 146.3-20 273.7-36l15.5-2V73l1-.5z"/><g fill="none" stroke="#E2E9E9" stroke-width="1"><path d="M0 51.4c3.4.6 7.7 1.4 11 2.3 133.2 34 224.3 34 308.6 34 110.2 0 116.7 36.6 229.8 26 113-11 128.7-44 222-42.6C865 73 889 38 1002 27c113-10.8 119.6 25.6 229.8 25.6 84.4 0 175.4 0 308.6 34 133 34.2 277-73 379.4-84.3 204-22.5 283.6 128.7 283.6 128.7"/><path d="M0 6C115.7-6 198.3 76.6 308 76.6c109.6 0 131.8-20 223-28.3 114.3-10.2 238.2 0 238.2 0s124 10.2 238.3 0c91-8.2 113.2-28 223-28S1425 103 1541 91c115.8-11.8 153.3-69 269.3-84.6 116-15.5 198.4 71 308 71 109.8 0 131.8-20 223-28 114-10.2 237.7 0 237.7 0s37.4 2.4 82.8 3.7"/></g>
+      </svg>
+      </div>
+  </a>
+</div>
+<div class="ground">
+  <div class="form_back" id="formR">
+  <p class="main__title1 tit " >Заполняй форму и вливайся в&nbsp;молодежный проект!</p>
+      <section class="main_f">
+
+        <form class="main__form" action="reg.html" target="_blank">
+
+          <input class="main__form_name" type="text" name="fname"
+          value="Иван Иванов" >
+
+          <input class="main__form_email" type="email" name="email"
+          placeholder="Электронная почта">
+
+          <input class="main__form_tel" type="tel" name="tel"
+          placeholder="+7 (900) 123-45-67" pattern="\+7\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}"></p>
+         <datalist id="tel-list">
+           <option value="+7 (900) 123-45-67" label="Телефонный номер №1">
+           <option value="+7 (900) 123-45-68" label="Телефонный номер №2">
+         </datalist>
+        <input class="main__form_button" type="submit" value="Оставь заявку">
+        </form>
+      </section>
+    </div>
+</div>
+    <!-- футер-->
+    <footer class="footer-distributed">
+  			<div class="footer-left">
+  				<h3>Московский<span>диалог</span></h3>
+  				<p class="footer-links">
+  					<a href="index.html">Главная</a>
+  					<a href="raspis.html">Расписание</a>
+  					<a href="about.html">О проекте</a>
+  					<a href="community.html">Сотрудничество</a>
+  					<a href="contact.html">Контакты</a>
+  					<a href="formR">Регистрация</a>
+  				</p>
+  				<p class="footer-company-name">2023, Молодежь Москвы</p>
+  			</div>
+
+  			<div class="footer-center">
+  				<div>
+  					<i class="fa fa-map-marker"></i>
+  					<p><span>Холодильный пер. 3, корп. 1, стр. 8, этаж 1</span>Москва</p>
+  				</div>
+
+  				<div>
+  					<i class="fa fa-phone"></i>
+  					<p>+7 (925) 063-42-70</p>
+  				</div>
+
+  				<div>
+  					<i class="fa fa-envelope"></i>
+  					<p><a href="mailto:support@company.com">MoscowDialog@yandex.ru</a></p>
+  				</div>
+  			</div>
+
+  			<div class="footer-right">
+  				<p class="footer-company-about">
+  					<span></span>
+  					Вливайся в молодежную тусовку вместе с&nbsp;Московскийм диалогом!
+  				</p>
+  				<div class="footer-icons">
+  					 <a href="https://vk.com/mos_dialog" target="_blank"><i class="fa fa-vk fa-2x"></i></a>
+  				</div>
+  			</div>
+  		</footer>
+    </div>
 </body>
-<footer class="page__footer">
-  <p class="page__footer_title">2020  © WebHero School</p>
-</footer>
 </html>
