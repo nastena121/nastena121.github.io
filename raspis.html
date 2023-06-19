@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width,initial-scale=1.0">
+      <link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@700&family=Roboto:wght@500&display=swap" rel="stylesheet">
+      <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+<link rel="shortcut icon" href="img/logo.svg" type="image/svg">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="fonts.css">
+      <link rel="stylesheet" href="style.css">
+     <title class="name-site">Расписание мероприятий</title>
+</head>
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap");
+
+:root {
+	--yellow: #ffff;
+	--dark: #2f313a;
+	--deg: -86deg;
+	--trans: all 0.4s ease 0s;
+}
+
+section {
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+	display: flex;
+	justify-content: center;
+	font-family: "Lato", Arial, Helvetica, serif;
+	background: linear-gradient(45deg, #FC466B, #3F5EFB);
+	font-size: 1em;
+}
+
+section *,
+section *:before,
+section *:after {
+	box-sizing: border-box;
+}
+
+.content {
+	width: 90vmin;
+}
+
+h2 {
+	text-align: center;
+}
+
+.team {
+	padding: 2em 0 2em 2.5em;
+	margin: 0;
+}
+
+.member {
+	margin: 1.5em 0 0.5em;
+	padding: 0.73em;
+	background: linear-gradient(
+		83deg,
+		var(--yellow) 0 97%,
+		#fff0 calc(97% + 1px) 100%
+	);
+	position: relative;
+	list-style: none;
+	display: inline-block;
+	transform: scale(0.85);
+	transition: var(--trans);
+}
+
+.member:nth-of-type(even) {
+	text-align: right;
+	background: linear-gradient(
+		-83deg,
+		var(--yellow) 0 97%,
+		#fff0 calc(97% + 1px) 100%
+	);
+}
+
+.thumb {
+	width: 13vmin;
+	height: 13vmin;
+	float: left;
+	margin-right: 1.25em;
+	background: linear-gradient(
+		var(--deg),
+		var(--dark) 0 70%,
+		var(--yellow) 0% 100%
+	);
+	transform: rotate(-4deg);
+	transition: var(--trans);
+	border-radius: 0.25em;
+	overflow: hidden;
+	margin-left: -3em;
+	padding: 0.5em;
+}
+
+.member:nth-of-type(even) .thumb {
+	--deg: 86deg;
+	float: right;
+	margin-left: 2em;
+	margin-right: -3em;
+	transform: rotate(4deg);
+}
+
+.thumb img {
+	width: 100%;
+	height: 100%;
+	border-radius: 0.25em;
+	filter: grayscale(1);
+	background: var(--dark);
+}
+
+.member:hover {
+	transform: scale(1);
+	transition: var(--trans);
+	filter: drop-shadow(0px 20px 10px #0008);
+}
+
+.member:hover .thumb {
+	padding: 0.1em;
+	transition: var(--trans);
+	transform: rotate(-1deg);
+	--deg: -89deg;
+}
+
+.member:nth-of-type(even):hover .thumb {
+	--deg: 91deg;
+}
+
+.member:hover .thumb img {
+	filter: none;
+	transition: var(--trans);
+}
+
+.description {
+	padding-top: 1vmin;
+}
+
+.description p {
+	padding: 0 2em;
+	margin-bottom: 1em;
+}
+
+.text {
+	background: linear-gradient(182deg, #fff0 60%, var(--dark) 0 100%);
+	display: inline;
+	transform: rotate(-2deg);
+	position: absolute;
+	margin: 0;
+	margin-top: -2.25em;
+	left: 9vmin;
+	padding: 0.5em 0.75em;
+	color: var(--yellow);
+	border-radius: 0.25em;
+	font-size: 1.35em;
+	transform-origin: left bottom;
+}
+
+.member:nth-of-type(even) h3 {
+	left: inherit;
+	right: 9vmin;
+	transform: rotate(2deg);
+	transform-origin: right bottom;
+	background: linear-gradient(-182deg, #fff0 60%, var(--dark) 0 100%);
+}
+
+.member:hover h3 {
+	transition: var(--trans);
+	transform: rotate(0deg);
+	background: linear-gradient(180deg, #fff0 59%, var(--dark) 0 100%);
+}
+
+.co-funder:after {
+	content: "CO-FUNDER";
+	font-size: 0.75em;
+	position: absolute;
+	top: -1.5em;
+	background: var(--yellow);
+	right: 4em;
+	transform: rotate(3deg);
+	padding: 0.35em 0.75em 0.5em;
+	border-radius: 0.25em;
+	color: var(--dark);
+	font-weight: bold;
+}
+
+.co-funder:nth-of-type(even):after {
+	right: inherit;
+	left: 4em;
+	transform: rotate(-3deg);
+}
+
+.description p a {
+	display: inline-block;
+	margin: 0.5em 0 0 0;
+	background: var(--dark);
+	color: var(--yellow);
+	padding: 0.1em 0.5em 0.35em;
+	border-radius: 0.5em;
+	text-decoration: none;
+	transition: var(--trans);
+}
+.description p a:hover {
+	transition: var(--trans);
+	color: var(--dark);
+	background: var(--yellow);
+	font-weight: bold;
+}
+
+.description p a img {
+	float: left;
+	width: 22px;
+	filter: invert(1);
+	border-radius: 0.15em;
+	padding: 2px;
+	background: #fff;
+	margin-right: 2px;
+}
+=========
+:root {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+	cursor: default;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+
+*,
+:before,
+:after {
+	-webkit-box-sizing: inherit;
+	-moz-box-sizing: inherit;
+	-ms-box-sizing: inherit;
+	-o-box-sizing: inherit;
+	box-sizing: inherit;
+}
+
+html, body {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+html {
+	overflow: hidden;
+}
+
+body {
+	margin: 0;
+	overflow: auto;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
+	-moz-overflow-scrolling: touch;
+	-ms-overflow-scrolling: touch;
+	-o-overflow-scrolling: touch;
+	overflow-scrolling: touch;
+	-ms-overflow-style: ms-autohiding-scrollbar;
+}
+
+#page-wrap {
+	position: relative;
+	display: block;
+	clear: both;
+	background: none;
+	color: #000;
+	text-decoration: none;
+	padding: 10rem 0;
+	width: 100%;
+	height: 100%;
+}
+
+#inner-wrap {
+	position: absolute;
+	top: 3rem;
+	left: 0;
+	right: 0;
+	bottom: 3rem;
+	display: table;
+	width: 100%;
+	height: 100%;
+	min-height: 322px;
+	overflow: visible;
+}
+
+.waves {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	display: block;
+	min-width: 100%;
+	min-height: 70%;
+	margin: auto 0;
+}
+
+img, svg {
+	display: block;
+	overflow: visible;
+	pointer-events: none;
+}
+
+.group:before,
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.group {
+  zoom: 1;
+
+
+}
+</style>
+<body style="margin: 0;">
+  <div class="wrapper">
+    <header class="main-header">
+      <div class="container3">
+        <nav class="navbar navbar-expand-lg main-nav px-0">
+          <a class="navbar-brand" href="index.html">
+                  <img src="img/logo.svg" alt="rajeshdas.com">
+                </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainMenu" aria-controls="mainMenu" aria-expanded="false" aria-label="Toggle navigation">
+                          <span class="icon-bar icon-bar-1"></span>
+                          <span class="icon-bar icon-bar-2"></span>
+                          <span class="icon-bar icon-bar-3"></span>
+                      </button>
+          <div class="collapse navbar-collapse" id="mainMenu">
+            <ul class="navbar-nav ml-auto text-uppercase f1">
+              <li>
+                <a href="index.html" class="active active-first">Главная</a>
+              </li>
+              <li>
+                <a href="About.html">о проекте</a>
+              </li>
+              <li>
+                <a href="community.html">сотрудничество</a>
+              </li>
+              <li>
+                <a  href="contact.html">контакты</a>
+              </li>
+              <li>
+                <a href="index.html #formR">Регистрация</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+        <script src="https://kit.fontawesome.com/fc596df623.js" crossorigin="anonymous"></script>
+    <!-- время-->
+      <!-- /.container -->
+
+        </header>
+        <div>
+        <!-- аккордеон --><a class="group" id="page-wrap"  target="_blank" rel="external noopener">
+        <div id="inner-wrap"><svg class="waves" xmlns="http://www.w3.org/2000/svg" width="1440" height="321.75" viewBox="0 0 960 214.5" preserveAspectRatio="xMinYMid meet"><defs><style>.waves>path{-webkit-animation:a 17390ms ease-in-out infinite alternate-reverse both;-moz-animation:a 17390ms ease-in-out infinite alternate-reverse both;-ms-animation:a 17390ms ease-in-out infinite alternate-reverse both;-o-animation:a 17390ms ease-in-out infinite alternate-reverse both;animation:a 17390ms ease-in-out infinite alternate-reverse both;-webkit-animation-timing-function:cubic-bezier(.25,0,.75,1);-moz-animation-timing-function:cubic-bezier(.25,0,.75,1);-ms-animation-timing-function:cubic-bezier(.25,0,.75,1);-o-animation-timing-function:cubic-bezier(.25,0,.75,1);animation-timing-function:cubic-bezier(.25,0,.75,1);-webkit-will-change:transform;-moz-will-change:transform;-ms-will-change:transform;-o-will-change:transform;will-change:transform}.waves>path:nth-of-type(1){-webkit-animation-duration:20580ms;-moz-animation-duration:20580ms;-ms-animation-duration:20580ms;-o-animation-duration:20580ms;animation-duration:20580ms}.waves>path:nth-of-type(2){-webkit-animation-delay:-2690ms;-moz-animation-delay:-2690ms;-ms-animation-delay:-2690ms;-o-animation-delay:-2690ms;animation-delay:-2690ms;-webkit-animation-duration:13580ms;-moz-animation-duration:13580ms;-ms-animation-duration:13580ms;-o-animation-duration:13580ms;animation-duration:13580ms}g>path:nth-of-type(1){-webkit-animation-delay:-820ms;-moz-animation-delay:-820ms;-ms-animation-delay:-820ms;-o-animation-delay:-820ms;animation-delay:-820ms;-webkit-animation-duration:10730ms;-moz-animation-duration:10730ms;-ms-animation-duration:10730ms;-o-animation-duration:10730ms;animation-duration:10730ms}.waves>path:nth-of-type(1),g>path:nth-of-type(2){-webkit-animation-direction:alternate;-moz-animation-direction:alternate;-ms-animation-direction:alternate;-o-animation-direction:alternate;animation-direction:alternate}@-webkit-keyframes a{0%{-webkit-transform:translateX(-750px);transform:translateX(-750px)}100%{-webkit-transform:translateX(-20px);transform:translateX(-20px)}}@-moz-keyframes a{0%{-moz-transform:translateX(-750px);transform:translateX(-750px)}100%{-moz-transform:translateX(-20px);transform:translateX(-20px)}}@-ms-keyframes a{0%{-ms-transform:translateX(-750px);transform:translateX(-750px)}100%{-ms-transform:translateX(-20px);transform:translateX(-20px)}}@-o-keyframes a{0%{-o-transform:translateX(-750px);transform:translateX(-750px)}100%{-o-transform:translateX(-20px);transform:translateX(-20px)}}@keyframes a{0%{-webkit-transform:translateX(-750px);-moz-transform:translateX(-750px);-ms-transform:translateX(-750px);-o-transform:translateX(-750px);transform:translateX(-750px)}100%{-webkit-transform:translateX(-20px);-moz-transform:translateX(-20px);-ms-transform:translateX(-20px);-o-transform:translateX(-20px);transform:translateX(-20px)}}</style><linearGradient id="a"><stop stop-color="#00A8DE"/><stop offset="0.2" stop-color="#333391"/><stop offset="0.4" stop-color="#E91388"/><stop offset="0.6" stop-color="#EB2D2E"/>
+        </linearGradient></defs><path fill="url(#a)" d="M2662.6 1S2532 41.2 2435 40.2c-19.6-.2-37.3-1.3-53.5-2.8 0 0-421.3-59.4-541-28.6-119.8 30.6-206.2 75.7-391 73.3-198.8-2-225.3-15-370.2-50-145-35-218 37-373.3 36-19.6 0-37.5-1-53.7-3 0 0-282.7-36-373.4-38C139 26 75 46-1 46v106c17-1.4 20-2.3 37.6-1.2 130.6 8.4 210 56.3 287 62.4 77 6 262-25 329.3-23.6 67 1.4 107 22.6 193 23.4 155 1.5 249-71 380-62.5 130 8.5 209 56.3 287 62.5 77 6 126-18 188-18 61.4 0 247-38 307.4-46 159.3-20 281.2 29 348.4 30 67 2 132.2 6 217.4 7 39.3 0 87-11 87-11V1z"/><path fill="#F2F5F5" d="M2663.6 73.2S2577 92 2529 89c-130.7-8.5-209.5-56.3-286.7-62.4s-125.7 18-188.3 18c-5 0-10-.4-14.5-.7-52-5-149.2-43-220.7-39-31.7 2-64 14-96.4 30-160.4 80-230.2-5.6-340.4-18-110-12-146.6 20-274 36S820.4 0 605.8 0C450.8 0 356 71 225.2 62.2 128 56 60.7 28-.3 11.2V104c22 7.3 46 14.2 70.4 16.7 110 12.3 147-19.3 275-35.5s350 39.8 369 43c27 4.3 59 8 94 10 13 .5 26 1 39 1 156 2 250-70.3 381-62 130.5 8.2 209.5 56.3 286.7 62 77 6.4 125.8-18 188.3-17.5 5 0 10 .2 14.3.6 52 5 145 49.5 220.7 38.2 32-5 64-15 96.6-31 160.5-79.4 230.3 6 340 18.4 110 12 146.3-20 273.7-36l15.5-2V73l1-.5z"/><g fill="none" stroke="#E2E9E9" stroke-width="1"><path d="M0 51.4c3.4.6 7.7 1.4 11 2.3 133.2 34 224.3 34 308.6 34 110.2 0 116.7 36.6 229.8 26 113-11 128.7-44 222-42.6C865 73 889 38 1002 27c113-10.8 119.6 25.6 229.8 25.6 84.4 0 175.4 0 308.6 34 133 34.2 277-73 379.4-84.3 204-22.5 283.6 128.7 283.6 128.7"/><path d="M0 6C115.7-6 198.3 76.6 308 76.6c109.6 0 131.8-20 223-28.3 114.3-10.2 238.2 0 238.2 0s124 10.2 238.3 0c91-8.2 113.2-28 223-28S1425 103 1541 91c115.8-11.8 153.3-69 269.3-84.6 116-15.5 198.4 71 308 71 109.8 0 131.8-20 223-28 114-10.2 237.7 0 237.7 0s37.4 2.4 82.8 3.7"/></g>
+      </svg>
+    </div>
+  </a>
+</div>
+
+        <section class="raspis">
+        <div class="content">
+
+      	<ul class="team">
+      		<li class="member co-funder">
+      			<div class="thumb"><img src="img/rospis.png"></div>
+      			<div class="description">
+      				<h3 class='text'>РОСПИСЬ ЭКО-СУМОК</h3>
+      				<p><a>15 мая</a><br>
+      					Хочешь обновить свой гардероб, добавив оригинальные аксессуары, которые будут полезными каждый день?<br><br>
+
+      Роспись эко-шоперов своими руками – это отличная возможность выразить себя, а также погрузиться в увлекательный процесс создания аксессуара.<br><br>
+
+      Мастера представят большой выбор эскизов на любую тематику, поделятся последовательностью выполнения рисунка и подскажут, как лучше сочетать цвета.<br><br>
+
+      Вместе погрузимся в незабываемый процесс!<br> <a>Адрес: </strong> ВДНХ, Проспект Мира, 119, стр. 461, Павильон «Умный город»</a></p>
+      			</div>
+      		</li>
+      		<li class="member ">
+      			<div class="thumb"><img src="img/svech.png"></div>
+      			<div class="description">
+      				<h3 class='text'>СВЕЧИ ИЗ ВОЩИНЫ</h3>
+      					<p><a>17 мая</a><br>
+                  Свечи создадут уют и атмосферу летним вечером. А свечи, сделанные своими руками – тем более.<br><br>
+
+Приходи 16 июня на мастер-класс по созданию свечей из вощины и убедись в этом сам!<br><br>
+
+Ты научишься своими руками создавать свечи, которые будут создавать уют, где бы ты их не зажег.<br><br>
+
+Мастера научат создавать необычные ароматные свечи, а ты сможешь украсить лентами и другим декором на свой вкус. Горящая свеча, поставленная рядом, будет оказывать целебное воздействие на организм.<br><br>
+
+Приходи на мастер-класс, и мы вместе раскроем твой творческий потенциал!<br>
+<a>Адрес: </strong> ВДНХ, Проспект Мира, 119, стр. 461, Павильон «Умный город»</a></p>
+      			</div>
+      		</li>
+      		<li class="member">
+      			<div class="thumb"><img src="img/potenc.png"></div>
+      			<div class="description">
+      				<h3 class='text'>ВСТРЕЧА С ЕВГЕНИЕЙ ТЯПЧЕНКО</h3>
+      				<p> Раскрытие потенциала и преодаление страхов через телесные практики <br>
+                <a>22 мая</a><br>
+Предлагаем лучше узнать себя через телесные практики.<br><br>
+
+Евгения Тяпченко - преподаватель йоги и медитации, психолог,
+гипнотерапевт, поможет участникам TED-встречи раскрыть свой потенциал и преодолеть внутренние страхи.
+Специально для этого она проведет практику гвоздестояния.<br><br>
+Евгения подробно все расскажет и даст возможность ощутить эти эмоции на себе.<br><br>
+Мы ждем именно тебя!<br>
+<a>Адрес: </strong> улица Коровий Вал, 3с5»</a></p>
+      			</div>
+      		</li>
+      		<li class="member">
+      			<div class="thumb"><img src="img/acvar.png"></div>
+      			<div class="description">
+      				<h3 class='text'>АКВАРЕЛЬНАЯ ЖИВОПИСЬ</h3>
+      				<p>  <a>24 мая</a><br>
+                Акварельная живопись – утонченное хобби и отличный способ творческой самореализации.<br><br>
+Приходи 24 мая на мастер-класс по рисованию картины акварелью!<br><br>
+Наши мастера познакомят тебя с материалами и особенной техникой рисования,
+подготовят эскизы, а ты сможешь написать свою собственную картину.<br><br>
+Давай вместе почувствуем себя художниками и погрузимся в атмосферу творчества?<br><br>
+До встречи!<br>
+<a>Адрес: </strong> ВДНХ, Проспект Мира, 119, стр. 461, Павильон «Умный город»</a></p>
+      			</div>
+      		</li>
+      		<li class="member">
+      			<div class="thumb"><img src="img/cont.png"></div>
+      			<div class="description">
+      				<h3 class='text'>ЗАВТРАК С ПОЛЬЗОЙ</h3>
+      				<p>Контент для фуд-индустрии в условиях новой реальности<br>
+                 <a>27 мая</a><br>
+                Еду можно не только вкусно приготовить, но и красиво сфотографировать!<br><br>
+А как это сделать качественно расскажет Сабина Геворкян, продюсер, smm-менеджер Еда.ру.<br><br>
+Завтрак будет посвящен теме создания контента для фуд-индустрии в условиях новой реальности,
+а именно, как создавать и продвигать материал фуд-блогерам, SMM-специалистам и руководителям HoReCa.<br><br>
+С этого завтрака ты уйдешь не только сытым, но и с классными фотографиями.<br><br>
+<a>Адрес: </strong> ул. Мытная 74, Даниловский рынок, Кулинарная школа Джейми Оливера</a></p>
+      			</div>
+      		</li>
+      		<li class="member">
+      			<div class="thumb"><img src="img/it.png"></div>
+      			<div class="description">
+      				<h3 class='text'>ВСТРЕЧА С HИНОЙ ГОФИНОЙ</h3>
+      				<p>IT-Вселенная возможностей для молодого человека <br>
+                <a>24 мая</a><br>
+                Давай посетим IT-Вселенную и узнаем, что там нового!<br><br>
+
+24 мая Нина Гофина, менеджер по организации новых форматов обучения Корпоративного университета Билайн,
+преподаватель в НИУ ВШЭ, расскажет всем участниками TED-встречи про обучение в новом формате, про преимущества IT-сферы и
+безграничные возможности в этом деле.<br><br>
+
+И кстати, на этой встрече для всех участников будет вкусный КОФЕ-БРЕЙК для поднятия настроения!<br><br>
+Приходи, будет интересно!<br>
+<a>Адрес: </strong> улица Коровий Вал, 3с5»</a></p>
+      			</div>
+      		</li>
+      		<li class="member">
+      			<div class="thumb"><img src="img/event.png"></div>
+      			<div class="description">
+      				<h3 class='text'>ВСТРЕЧА С СОФЬЕЙ ЕВЕНСАПЕР</h3>
+      				<p>Поговорим об event-индустрия.<br>
+                <a>29 мая</a><br>
+                Не знаешь, как выйти за рамки организации вузовский мероприятий?<br><br>
+
+Как находить заказчиков больших ивентов в Москве?<br><br>
+
+Как собрать команду профессионалов и начать работать на новом уровне?<br><br>
+
+29 мая на TED-встрече с Софьей Евенсапер ты узнаешь, почему event-индустрия – это работа мечты!<br><br>
+
+У Софьи большой опыт в организации Всероссийских крупных мероприятий начиная от работы ведущей,
+заканчивая поиском партнеров. Поэтому, у нее точно можно многому поучиться.<br><br>
+
+Это встреча будет наполнена полезной и важной информацией, поэтому зови с собой друзей, чтобы вместе не пропустить ничего важного!<br><br>
+
+Приходи обязательно! Ты получишь интересный опыт и незабываемые эмоции.
+<br><a>Адрес: </strong> улица Коровий Вал, 3с5»</a></p>
+      			</div>
+      		</li>
+          <li class="member">
+      			<div class="thumb"><img src="img/callig.png"></div>
+      			<div class="description">
+      				<h3 class='text'>КАЛЛИГРАФИЯ И ЛЕТТЕРИНГ</h3>
+      				<p><a>31 мая</a><br>
+                А ты знаешь, что занятия каллиграфией сравнимы с медитацией?<br><br>
+
+Приходи 31 мая на мастер-класс по занятию каллиграфией и убедись в этом сам!<br><br>
+
+Мастера научат правильно держать кисть и обучат основам каллиграфического почерка.<br><br>
+
+После получения базовых знаний, ты сможешь сделать красивую надпись своего имени сам!<br><br>
+ Стоит овладеть буквенной магией – и можно расписывать кружки, постеры, футболки.<br><br>
+
+Приходи обязательно! Ты получишь интересный опыт и незабываемые эмоции.<br>
+<a>Адрес: </strong> ВДНХ, Проспект Мира, 119, стр. 461, Павильон «Умный город»</a></p>
+      			</div>
+      		</li>
+          <li class="member">
+            <div class="thumb"><img src="img/bomb.png"></div>
+            <div class="description">
+              <h3 class='text'>БОМБОЧКИ ДЛЯ ВАННЫ</h3>
+              <p><a>2 июня</a><br>
+                Изделия своими руками – это просто, интересно и весело.
+                А изготовление бомбочек для ванны – это отличный способ превратить купание в настоящее удовольствие<br><br>
+
+Приходи на мастер класс 2 июня по созданию бомбочек для ванны!<br><br>
+
+Мастера познакомят с материалами, расскажут о последовательности действий,
+а ты сможешь создать бурлящий шар разных форм, добавить на свой вкус красители,
+масла, сухоцветы. Ароматическую композицию можно будет упаковать в подарочный пакетик.<br><br>
+
+Мастер-класс подарит яркие и незабываемые впечатления.<br>
+<a>Адрес: </strong> ВДНХ, Проспект Мира, 119, стр. 461, Павильон «Умный город»</a></p>
+            </div>
+          </li>
+          <li class="member">
+            <div class="thumb"><img src="img/prod.png"></div>
+            <div class="description">
+              <h3 class='text'>ЗАВТРАК С ПОЛЬЗОЙ</h3>
+              <p><a>3 июня</a><br>
+                Проведи первые выходные июня вместе с нами!<br><br>
+
+2 июня ждем тебя на «Завтраке с пользой» с приглашенным гостем - Сергеем Хариным, продюсером и автором песен.
+За приготовлением полезного завтрака наш гость расскажет о значении продюсерства в современных реалиях, а также самопродюсировании.<br><br>
+                <a>Адрес: </strong> ул. Мытная 74, Даниловский рынок, Кулинарная школа Джейми Оливера</a></p>
+            </div>
+          </li>
+      	</ul>
+
+      </div>
+    </section>
+    <!-- футер-->
+    <footer class="footer-distributed">
+  			<div class="footer-left">
+  				<h3>Московский<span>диалог</span></h3>
+  				<p class="footer-links">
+  					<a href="index.html">Главная</a>
+  					<a href="raspis.html">Расписание</a>
+  					<a href="about.html">О проекте</a>
+  					<a href="community.html">Сотрудничество</a>
+  					<a href="contact.html">Контакты</a>
+  					<a href="formR">Регистрация</a>
+  				</p>
+  				<p class="footer-company-name">2023, Молодежь Москвы</p>
+  			</div>
+
+  			<div class="footer-center">
+  				<div>
+  					<i class="fa fa-map-marker"></i>
+  					<p><span>Холодильный пер. 3, корп. 1, стр. 8, этаж 1</span>Москва</p>
+  				</div>
+
+  				<div>
+  					<i class="fa fa-phone"></i>
+  					<p>+7 (925) 063-42-70</p>
+  				</div>
+
+  				<div>
+  					<i class="fa fa-envelope"></i>
+  					<p><a href="mailto:support@company.com">MoscowDialog@yandex.ru</a></p>
+  				</div>
+  			</div>
+
+  			<div class="footer-right">
+  				<p class="footer-company-about">
+  					<span></span>
+  					Вливайся в молодежную тусовку вместе с Московским диалогом!
+  				</p>
+  				<div class="footer-icons">
+  					 <a href="https://vk.com/mos_dialog" target="_blank"><i class="fa fa-vk fa-2x"></i></a>
+  				</div>
+  			</div>
+  		</footer>
+          </div>
+        </div>
+
+  </body>
+
+  </html>

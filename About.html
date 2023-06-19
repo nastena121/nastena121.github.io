@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width,initial-scale=1.0">
+      <link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@700&family=Roboto:wght@500&display=swap" rel="stylesheet">
+      <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+<link rel="shortcut icon" href="img/logo.svg" type="image/svg">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="fonts.css">
+      <link rel="stylesheet" href="style.css">
+     <title class="name-site">О проекте "Московский диалог"</title>
+</head>
+<style>
+
+.push {
+  list-style: none;
+  font-family:  'girloybold', arial, helvetica, sans-serif;
+}
+.push li {
+  position: relative;
+  padding: 20px 0 20px 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.push li:before {
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #4F5151;
+  content: "";
+  left: 0;
+  transition: .3s ease-in-out;
+  top: 27px;
+}
+.push li:after {
+  position: absolute;
+  border-left: 1px dotted #4F5151;
+  width: 1px;
+  bottom: -12px;
+  content: "";
+  left: 3px;
+  top: 48px;
+}
+.push li:hover:before{box-shadow: 0 0 0 10px rgba(191,226,255,.8)}
+.push li:last-child:after {content: none;}
+
+        .background {
+          background-image:   url(img/fon.jpg);
+          background-position: bottom;
+           background-repeat: no-repeat;
+           background-size: cover;
+           height: 60vh;
+           width: 100%;
+
+        }
+
+        .firstsection {
+            height: 50vh;
+        }
+
+        .box-main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            max-width: 50%;
+            margin: auto;
+            height: 80%;
+        }
+
+        .blur {
+          animation: changeWidth 8s ease-in-out infinite;
+          background: rgba(255, 255, 255, 0.7); // Make sure this color has an opacity of less than 1
+          backdrop-filter: blur(8px); // This be the blur
+          border-right: 1px solid whitesmoke;
+          height: 100vh;
+}
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+body > * + * {
+  margin-top: 1.5em;
+}
+
+h1 {
+  text-align: center;
+  font-weight: 800;
+  color: rgb(6, 6, 6);
+  text-transform: uppercase;
+}
+
+blockquote {
+  margin-inline: auto;
+}
+
+/* blockquote card colors */
+blockquote.q-card-color-1 {
+  --accent-color: rgb(32 32 54);
+  --bg-color: rgb(181, 46, 104);
+  --dot-color: rgb(255 255 255 / .35);
+  --text-color: rgb(243 243 243);
+  --text-color-author: rgb(243 243 243);
+}
+
+/* blockquote card setup*/
+blockquote.q-card {
+  --padding: 1rem;
+  padding: var(--padding);
+  color: var(--text-color, black);
+  font-weight: 600;
+  background-color: var(--bg-color, white);
+  display: grid;
+  gap: 1rem;
+  background-image: radial-gradient(circle, var(--dot-color, rgba(0, 0, 0, 0.125)) calc(25% - 1px), transparent 25%);
+  background-size: 0.5rem 0.5rem;
+  border-radius: 0.25rem;
+  box-shadow: 0.5rem 0.5rem 2rem rgba(0, 0, 0, 0.5);
+}
+
+blockquote.q-card::before {
+  --qHeight: 4rem;
+  content: "";
+  margin-left: calc(var(--padding) * -1);
+  margin-top: calc(var(--padding) * -1);
+  height: var(--qHeight);
+  width: calc(var(--qHeight) * 1.1);
+  background-image: radial-gradient(circle at bottom right, transparent calc(var(--qHeight) / 4 - 1px), var(--accent-color, black) calc(var(--qHeight) / 4) calc(var(--qHeight) / 2), transparent calc(var(--qHeight) / 2 + 1px)), linear-gradient(var(--accent-color, black), var(--accent-color, black));
+  background-size: calc(var(--qHeight) / 2) calc(var(--qHeight) / 2);
+  background-position: top left, bottom left;
+  background-repeat: space no-repeat;
+}
+
+blockquote.q-card > .author {
+  color: var(--text-color-author, white);
+  background-color: var(--accent-color, black);
+  justify-self: end;
+  font-size: 0.75em;
+  padding: 0.5em 1em;
+  border-radius: 0.25rem;
+}
+
+blockquote.q-card > .author::before {
+  content: "- ";
+}
+
+.backirstsection {
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 70vh;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+.container1 {
+  display: flex;
+  width: 95%;
+  padding: 4% 2%;
+  box-sizing: border-box;
+  height: 60vh;
+}
+
+.box1 {
+  flex: 1;
+  overflow: hidden;
+  transition: .5s;
+  margin: 0 2%;
+  box-shadow: 0 20px 30px rgba(0,0,0,.1);
+  line-height: 0;
+}
+
+.box1 > img {
+  width: 200%;
+  height: calc(100% - 10vh);
+  object-fit: cover;
+  transition: .5s;
+}
+
+.box1 > span {
+  font-size: 3.8vh;
+  display: block;
+  text-align: center;
+  height: 10vh;
+  line-height: 2.6;
+}
+
+.box1:hover { flex: 1 1 50%; }
+.box1:hover > img {
+  width: 100%;
+  height: 100%;
+}
+.textabout{
+  margin: 7vw 6vw 6vw;
+  text-align: center;
+}
+.vkvideo{
+
+  text-align: center;
+}
+
+
+.tit2{
+  font-size: 80px;
+  padding: 15vw 0 1vw;
+      color: #8A0CA4;
+        color: white;
+
+}
+  .trans{
+    background-color: #b33b6d;
+   height:260px;
+   transform: skew(0, -5deg);
+   margin-top: -70px;
+  }
+
+.vk{
+    width=70%;
+    height:
+}
+.cc{
+  padding: 2vw;
+}
+</style>
+<body style="margin: 0;">
+  <div class="wrapper">
+    <header class="main-header">
+      <div class="container3">
+        <nav class="navbar navbar-expand-lg main-nav px-0">
+          <a class="navbar-brand" href="index.html">
+                  <img src="img/logo.svg" alt="rajeshdas.com">
+                </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainMenu" aria-controls="mainMenu" aria-expanded="false" aria-label="Toggle navigation">
+                          <span class="icon-bar icon-bar-1"></span>
+                          <span class="icon-bar icon-bar-2"></span>
+                          <span class="icon-bar icon-bar-3"></span>
+                      </button>
+          <div class="collapse navbar-collapse" id="mainMenu">
+            <ul class="navbar-nav ml-auto text-uppercase f1">
+              <li>
+                <a href="index.html" class="active active-first">Главная</a>
+              </li>
+              <li>
+                <a href="raspis.html">Расписание</a>
+              </li>
+              <li>
+                <a href="community.html">сотрудничество</a>
+              </li>
+              <li>
+                <a  href="contact.html">контакты</a>
+              </li>
+              <li>
+                <a href="index.html #formR">Регистрация</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <!-- /.container -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+        <script src="https://kit.fontawesome.com/fc596df623.js" crossorigin="anonymous"></script>
+    <!-- время-->
+        </header>
+
+   <div class="backirstsection">
+     <div class="trans">
+    <div class="d-flex flex-column justify-content-center w-100 h-100">
+
+    	<div class="d-flex flex-column justify-content-center align-items-center">
+        			<h3 class="main__title1 tit2">Здесь слышат молодежь</h3>
+    		</a>
+    	</div>
+    </div>
+  </div>
+</div>
+     <section class=textabout>
+        <div>
+         <p class="main__discription"> «Московский диалог» — это образовательная площадка, на которой проходят встречи с известными деятелями в сфере журналистики,
+    искусства, бизнеса, политики. На мероприятиях слушатели получают практические навыки публичных выступлений, тайм-менеджмента,
+    бизнес-планирования, узнают, как повысить личную эффективность и добиваться поставленных целей.
+    В 2020 году прошло более 100 таких встреч, а трансляции в социальных сетях посмотрели более пяти миллионов раз.</p>
+    <p class="main__discription">Активными участниками проекта стали более 10 тысяч студентов из 30 московских вузов. Как отмечают организаторы,
+    в новом году планируется официальное открытие студенческих клубов «Московского диалога» в университетах.</p>
+    </div>
+    </section>
+    <div class="container1">
+   <div class="box1">
+     <img src="img/gallery/v4.jpg">
+     <span>МК</span>
+   </div>
+   <div class="box1">
+     <img src="img/gallery/v6.jpg">
+     <span>TED-встречи</span>
+   </div>
+   <div class="box1">
+     <img src="img/gallery/v7.jpg">
+     <span>Завтраки с пользой</span>
+   </div>
+   <div class="box1">
+     <img src="img/gallery/v5.jpg">
+     <span>Выезды</span>
+   </div>
+  </div>
+<section>
+<div class="cc">
+     <blockquote class="q-card q-card-color-1">
+       <div class="content">Наш проект появился два года назад. Решающим фактором для его создания был запрос на общение и саморазвитие от столичных студентов. В 2019 году я стала частью команды в качестве руководителя одного из направлений, а позднее возглавила весь проект. Благодаря нашим мероприятиям (лекциям, мастер-классам, общению с участниками и спикерами)
+               ребята прокачивают свои навыки, получают новые знания, необходимые для дальнейшего карьерного и личностного роста.</div>
+       <div class='author'>руководитель проекта Евгения Шавкун</div>
+     </blockquote>
+   </div>
+    <div  class=textabout>
+      <p class="main__discription"> Московский диалог» реализуется в рамках деятельности проектного офиса «Молодежь Москвы», созданного в марте 2020 года. Его работа направлена на исследование и выявление запросов молодежных сообществ, выработку и реализацию проектов, мероприятий и акций. «Московский диалог»</p>
+    <p class="main__discription"> Сейчас у «Московского диалога» несколько направлений: «Завтраки с пользой», Moscow Talks, молодежные форумы. В сообщество вовлечены более 10 тысяч студентов из 30 вузов столицы. Они принимали участие в таких крупных общегородских событиях, как День молодежи и День студента, а также встречах, лекциях и мастер-классах молодежной лаборатории «Ты в Москве» и онлайн-марафона «Ты в Москве». Всего же к онлайн-мероприятиям проекта присоединились более 500 тысяч человек, а количество проведенных мероприятий превысило 200.</p>
+  </div>
+
+    <p class="main__title1">Что входит в проект?</p>
+    <ul class="push">
+      <li>Программа 20 лекций и мастер-классов.</li>
+      <li>Программа воркшопов и 10 ТЕД-лекций.</li>
+      <li>Привлечение экспертов для реализации образовательной программы, среди которых астроном Владимир Сурдин,
+        актриса театра и кино Наталья Акимова, музыкальный продюсер Антон Пронин,
+        преподаватель НИУ ВШЭ и CEO агентства bQ Group Дмитрий Бескромный, олимпийская чемпионка Татьяна Лебедева.</li>
+      <li>Проведение серии онлайн лекций.</li>
+    </ul>
+    <p class="main__title1">Окунись в нашу атмосферу:</p>
+    <videosrc="https://vk.com/video_ext.php?oid=-186439075&id=456239229&hash=ebd8f8a6cfe9a0c0&hd=2"
+ allow="autoplay; encrypted-media; fullscreen; picture-in-picture;"
+  frameborder="0" allowfullscreen >
+<source src="video.mp4" type="video/mp4">
+</video>
+
+
+  <div class=vkvideo>
+      <iframe class="vk" src="https://vk.com/video_ext.php?oid=-186439075&id=456239229&hash=ebd8f8a6cfe9a0c0&hd=2"
+   allow="autoplay; encrypted-media; fullscreen; picture-in-picture;"
+    frameborder="0" allowfullscreen></iframe>
+</div>
+  </div>
+</section>
+<!-- футер-->
+<footer class="footer-distributed">
+    <div class="footer-left">
+      <h3>Московский<span>диалог</span></h3>
+      <p class="footer-links">
+        <a href="index.html">Главная</a>
+        <a href="raspis.html">Расписание</a>
+        <a href="about.html">О проекте</a>
+        <a href="community.html">Сотрудничество</a>
+        <a href="contact.html">Контакты</a>
+        <a href="formR">Регистрация</a>
+      </p>
+      <p class="footer-company-name">2023, Молодежь Москвы</p>
+    </div>
+
+    <div class="footer-center">
+      <div>
+        <i class="fa fa-map-marker"></i>
+        <p><span>Холодильный пер. 3, корп. 1, стр. 8, этаж 1</span>Москва</p>
+      </div>
+
+      <div>
+        <i class="fa fa-phone"></i>
+        <p>+7 (925) 063-42-70</p>
+      </div>
+
+      <div>
+        <i class="fa fa-envelope"></i>
+        <p><a href="mailto:support@company.com">MoscowDialog@yandex.ru</a></p>
+      </div>
+    </div>
+
+    <div class="footer-right">
+      <p class="footer-company-about">
+        <span></span>
+        Вливайся в молодежную тусовку вместе с Московским диалогом!
+      </p>
+      <div class="footer-icons">
+         <a href="https://vk.com/mos_dialog" target="_blank"><i class="fa fa-vk fa-2x"></i></a>
+      </div>
+    </div>
+  </footer>
+  </div>
+</body>
+  </html>
